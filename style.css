@@ -185,3 +185,19 @@ nav {
   }
   .project-card { max-width: 100%; }
 }
+
+/* ——— FIX CLICK PE CARD ——— */
+.project-card { position: relative; z-index: 9999 !important; }
+.project-card a { display: block; cursor: pointer; }
+
+/* profilul nu mai interceptează click-urile din stânga */
+.profile-right { pointer-events: none !important; }
+/* dar butonul de CV rămâne clicabil */
+.profile-right a, .profile-right .cv-btn { pointer-events: auto !important; }
+
+/* limităm aria profilului ca să nu întindă un “covor” invizibil */
+.profile-right { width: 320px; }
+
+/* de siguranță: orice overlay decorativ nu ia click */
+header::before, header::after,
+.about-section::before, .about-section::after { pointer-events: none !important; }
