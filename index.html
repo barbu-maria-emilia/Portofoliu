@@ -6,11 +6,10 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="./style.css" />
 
-  <!-- Fix: cardul de proiect să fie clicabil, profilul să nu înghită click-ul -->
-  <style>
+<style>
     .projects-right, .project-card { position: relative; z-index: 10; }
     .project-card a { display: block; cursor: pointer; }
-    .profile-right { pointer-events: none; }              /* nu mai blochează zona stângă */
+    .profile-right { pointer-events: none; }             
     .profile-right a, .profile-right .cv-btn { pointer-events: auto; }
   </style>
 </head>
@@ -28,7 +27,6 @@
 </header>
 
 <main class="layout">
-  <!-- Projects -->
   <section id="project" class="projects-right">
     <h2>My Projects</h2>
 
@@ -42,7 +40,6 @@
     </div>
   </section>
 
-  <!-- Profile -->
   <section class="profile-right">
     <img src="./foto.jpg" alt="Poza mea" loading="lazy" />
     <span>Barbu Maria-Emilia</span>
