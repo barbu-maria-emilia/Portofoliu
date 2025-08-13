@@ -4,7 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Fix: cardul de proiect să fie clicabil, profilul să nu înghită click-ul -->
+  <style>
+    .projects-right, .project-card { position: relative; z-index: 10; }
+    .project-card a { display: block; cursor: pointer; }
+    .profile-right { pointer-events: none; }              /* nu mai blochează zona stângă */
+    .profile-right a, .profile-right .cv-btn { pointer-events: auto; }
+  </style>
 </head>
 <body>
 
@@ -20,7 +28,7 @@
 </header>
 
 <main class="layout">
-
+  <!-- Projects -->
   <section id="project" class="projects-right">
     <h2>My Projects</h2>
 
@@ -28,16 +36,17 @@
       <a class="project-link"
          href="https://barbu-maria-emilia.github.io/Project-caffee-shop/"
          target="_blank" rel="noopener noreferrer">
-        <img src="logo.png" alt="Crush Coffee project" />
+        <img src="./logo.png" alt="Crush Coffee project" loading="lazy" />
         <h3>Crush Coffee</h3>
       </a>
     </div>
   </section>
 
+  <!-- Profile -->
   <section class="profile-right">
-    <img src="foto.jpg" alt="Poza mea" />
+    <img src="./foto.jpg" alt="Poza mea" loading="lazy" />
     <span>Barbu Maria-Emilia</span>
-    <a href="BARBU_MARIA-EMILIA_CV.pdf" target="_blank" class="cv-btn">See CV</a>
+    <a href="./BARBU_MARIA-EMILIA_CV.pdf" target="_blank" class="cv-btn" rel="noopener">See CV</a>
   </section>
 </main>
 
