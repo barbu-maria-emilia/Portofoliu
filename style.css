@@ -197,3 +197,5 @@ nav {
 
 header::before, header::after,
 .about-section::before, .about-section::after { pointer-events: none !important; }
+
+
